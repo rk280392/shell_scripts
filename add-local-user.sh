@@ -11,6 +11,14 @@ fi
 # get username
 read -p " Enter your username : " USER_NAME 
 
+STRLENGTH=$(echo -n $USER_NAME | wc -m)
+
+if [[ "${STRLENGTH}" -lt 4 ]]
+then
+	echo "Please enter at least 4 charatcters "
+	exit 1
+fi
+
 # get fullname
 
 read -p " Enter full name : "  FULL_NAME
