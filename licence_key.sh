@@ -25,7 +25,7 @@ expect {
   }
 }
 expect -re "$prompt"
-send -- "mysql -uroot -pwifi123#412202 unibox -e 'select * from license_key'\r"
+send -- "mysql -uroot -ppassword unibox -e 'select * from license_key'\r"
 expect -re "$prompt"
 send -- "exit\r"
 
