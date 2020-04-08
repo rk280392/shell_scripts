@@ -1,0 +1,2 @@
+grep -Po "^\w+.*\d{1,5}/tcp" /etc/services | sed 's/\s/,/g' > services.csv
+cat /etc/services | awk '!/^#|udp/{print $1 "," $2}' | sed -r '/^\s*$/d'  > services.csv
